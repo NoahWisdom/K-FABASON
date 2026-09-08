@@ -63,8 +63,70 @@ img {
 /* Navbar */
 .navbar {
     background-color: var(--blus);
-    transition: background-color 0.3s ease-in-out;
+    transition: background-color 0.4s ease, box-shadow 0.4s ease, padding 0.3s ease;
     width: 100%;
+}
+
+.navbar.navbar-scrolled {
+    background-color: rgba(4, 2, 115, 0.97);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* Animated Hamburger Menu */
+.hamburger-animated {
+    border: none;
+    padding: 8px;
+}
+
+.hamburger-animated .hamburger-lines {
+    width: 26px;
+    height: 20px;
+    position: relative;
+    background-image: none !important;
+    display: inline-block;
+}
+
+.hamburger-animated .hamburger-lines::before,
+.hamburger-animated .hamburger-lines::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 26px;
+    height: 3px;
+    background-color: var(--white);
+    border-radius: 3px;
+    transition: transform 0.35s ease, top 0.25s ease, width 0.25s ease, box-shadow 0.25s ease, background-color 0.3s ease;
+}
+
+/* Top line + middle line (via box-shadow) */
+.hamburger-animated .hamburger-lines::before {
+    top: 0;
+    box-shadow: 0 8px 0 var(--white);
+}
+
+/* Bottom line */
+.hamburger-animated .hamburger-lines::after {
+    top: 16px;
+}
+
+/* When hamburger is active (menu open), animate to X */
+.hamburger-animated.is-active .hamburger-lines::before {
+    top: 8px;
+    transform: rotate(45deg);
+    box-shadow: none;
+    background-color: var(--gold);
+}
+
+.hamburger-animated.is-active .hamburger-lines::after {
+    top: 8px;
+    transform: rotate(-45deg);
+    width: 26px;
+    background-color: var(--gold);
+}
+
+/* Smooth collapse animation */
+.navbar-collapse {
+    transition: height 0.35s ease, opacity 0.3s ease;
 }
 
 .navbar a {
@@ -210,7 +272,7 @@ img {
 }
 
 .portfolio-item {
-    transition: all 0.5s ease;
+    transition: opacity 0.3s ease, transform 0.3s ease;
     cursor: pointer;
 }
 
@@ -225,6 +287,9 @@ img {
     display: flex;
     align-items: flex-end;
     position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transform-style: preserve-3d;
+    will-change: transform;
 }
 
 .portfolio-label {
