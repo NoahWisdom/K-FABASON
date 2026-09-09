@@ -20,7 +20,7 @@
 
 html {
     scroll-behavior: smooth;
-    scroll-padding-top: 90px;
+    scroll-padding-top: 70px;
 }
 
 body {
@@ -31,7 +31,6 @@ body {
     line-height: 1.6;
     color: var(--neutral-800);
     overflow-x: hidden;
-    padding-top: 90px;
 }
 
 img {
@@ -65,6 +64,13 @@ img {
     background-color: var(--blus);
     transition: background-color 0.4s ease, box-shadow 0.4s ease, padding 0.3s ease;
     width: 100%;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.navbar .container {
+    padding-top: 8px;
+    padding-bottom: 8px;
 }
 
 .navbar.navbar-scrolled {
@@ -154,7 +160,7 @@ img {
 
 /* About page header banner */
 .about-page-hero {
-    padding: 160px 20px 60px;
+    padding: 80px 20px 60px;
     background: linear-gradient(rgba(4, 2, 115, 0.75), rgba(109, 23, 153, 0.75)), url('../images/branding/hero-background.jpg');
     background-size: cover;
     background-position: center;
@@ -168,7 +174,7 @@ img {
 
 @media (max-width: 575.98px) {
     .about-page-hero {
-        padding: 130px 15px 40px;
+        padding: 70px 15px 40px;
     }
     .about-page-hero h1 {
         font-size: 1.9rem;
@@ -189,7 +195,7 @@ img {
     background-size: cover;
     background-position: center;
     overflow: hidden;
-    padding: 100px 20px;
+    padding: 70px 20px 100px;
 }
 
 .hero h1 {
@@ -578,12 +584,17 @@ footer a:hover {
     .card {
         margin-bottom: 20px;
     }
+    .navbar .container {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
     .navbar-collapse {
         text-align: center;
         background-color: var(--purple);
         border-radius: 10px;
-        margin-top: 10px;
+        margin-top: 8px;
         padding: 10px 0;
+        width: 100%;
     }
     .navbar-nav .nav-item {
         margin: 5px 0;
@@ -633,7 +644,14 @@ footer a:hover {
 
 @media (max-width: 575.98px) {
     .navbar-brand img {
-        max-width: 120px !important;
+        max-width: 110px !important;
+    }
+    .navbar .container {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .navbar-toggler {
+        padding: 6px 10px;
     }
     .hero {
         padding: 60px 15px;
