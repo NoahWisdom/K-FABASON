@@ -21,6 +21,7 @@
 html {
     scroll-behavior: smooth;
     scroll-padding-top: 70px;
+    overflow-x: hidden;
 }
 
 body {
@@ -198,10 +199,7 @@ img {
     overflow: hidden;
     padding: 70px 20px 100px;
     margin-top: -18px;
-    position: relative;
-    top: -18px;
     z-index: 1;
-    margin-bottom: -18px;
 }
 
 .hero h1 {
